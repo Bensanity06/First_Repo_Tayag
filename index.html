@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- EDIT: the title shown on the browser tab -->
+  <title>Roel Reiben Tayag | Video Editor & IT Student</title>
+  <meta name="description" content="Portfolio of Roel Reiben Tayag, a second-year IT student and video editor.">
+  <!-- Connects the CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Connects the JavaScript file (defer = runs after the page has loaded) -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading portfolio...</p>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- EDIT: your initials / logo text -->
+      <a href="#home" class="logo">Roel<span>.</span></a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch light/dark mode" title="Switch light/dark mode">
+          <span class="theme-icon" id="themeIcon">&#9790;</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO / HOME SECTION ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+      </div>
+
+      <div class="container hero-container">
+        <div class="hero-text">
+          <p class="hero-greeting reveal">Hello, I'm</p>
+          <!-- EDIT: your name -->
+          <h1 class="hero-name reveal">Roel Reiben <span class="gradient-text">Tayag</span></h1>
+          <!-- The typing words are set in script.js (CONFIG.typingWords) -->
+          <h2 class="hero-role reveal">
+            <span class="typing" id="typing"></span><span class="cursor">|</span>
+          </h2>
+          <!-- EDIT: your short introduction -->
+          <p class="hero-description reveal">
+            A second-year IT student who turns raw footage into stories people remember.
+            I edit short films, music videos and social media content, and I build
+            websites with clean, simple code.
+          </p>
+          <div class="hero-buttons reveal">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Hire Me</a>
+          </div>
+          <!-- EDIT: your social media links (replace the # with your real links) -->
+          <div class="hero-socials reveal">
+            <a href="#" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">Fb</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">Yt</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">Ig</a>
+            <a href="#" target="_blank" rel="noopener" aria-label="GitHub" class="social-link">Gh</a>
+          </div>
+        </div>
+
+        <div class="hero-image reveal">
+          <div class="profile-frame">
+            <!-- Profile picture: set CONFIG.profileImage in script.js.
+                 If no picture is set, your initials are shown instead. -->
+            <img src="" alt="Roel Reiben Tayag" class="profile-img" id="profileImg" hidden>
+            <div class="profile-initials" id="profileInitials">RT</div>
+          </div>
+          <div class="floating-badge badge-1">&#127916; Video Editor</div>
+          <div class="floating-badge badge-2">&#128187; IT Student</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Get to know me</p>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <!-- EDIT: your story -->
+            <h3>Editor by passion, developer in training.</h3>
+            <p>
+              I'm Roel Reiben Tayag, a second-year Information Technology student.
+              I started editing videos for fun and it quickly became my favourite way
+              to tell stories. Today I edit vlogs, school projects, music videos and
+              short-form content for social media.
+            </p>
+            <p>
+              My IT background helps me work fast and smart: I understand file
+              formats, codecs, workflows and the web. I enjoy learning new tools and
+              I always aim for clean cuts, good pacing and strong sound.
+            </p>
+
+            <div class="about-info">
+              <!-- EDIT: your details -->
+              <div><span>Name:</span> Roel Reiben Tayag</div>
+              <div><span>Course:</span> BS Information Technology</div>
+              <div><span>Year:</span> 2nd Year</div>
+              <div><span>Location:</span> Philippines</div>
+              <div><span>Email:</span> tayag.roelreiben@epcst.edu.ph</div>
+              <div><span>Status:</span> Open for projects</div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+          </div>
+
+          <div class="about-stats">
+            <!-- EDIT: change the numbers in data-target -->
+            <div class="stat-card reveal">
+              <h3 class="counter" data-target="25">0</h3>
+              <p>Videos Edited</p>
+            </div>
+            <div class="stat-card reveal">
+              <h3 class="counter" data-target="10">0</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="stat-card reveal">
+              <h3 class="counter" data-target="3">0</h3>
+              <p>Years Editing</p>
+            </div>
+            <div class="stat-card reveal">
+              <h3 class="counter" data-target="6">0</h3>
+              <p>Tools Mastered</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">What I can do</p>
+          <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skills-column reveal">
+            <h3 class="skills-heading">&#127916; Video Editing</h3>
+            <!-- EDIT: skill name and level (data-level = percentage) -->
+            <div class="skill">
+              <div class="skill-info"><span>Adobe Premiere Pro</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>CapCut</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Adobe After Effects</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>DaVinci Resolve (Color Grading)</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="65"></div></div>
+            </div>
+          </div>
+
+          <div class="skills-column reveal">
+            <h3 class="skills-heading">&#128187; IT &amp; Web</h3>
+            <div class="skill">
+              <div class="skill-info"><span>HTML5 &amp; CSS3</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>JavaScript</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="60"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Adobe Photoshop</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Git &amp; GitHub</span><span class="skill-percent">0%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-level="55"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services / what I offer -->
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">&#127909;</div>
+            <h3>Video Editing</h3>
+            <p>Clean cuts, smooth pacing and storytelling for vlogs, events and short films.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#128241;</div>
+            <h3>Short-Form Content</h3>
+            <p>Reels, TikToks and YouTube Shorts with captions, effects and trending styles.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#10024;</div>
+            <h3>Motion Graphics</h3>
+            <p>Animated titles, lower thirds, intros and logo animations.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">&#127912;</div>
+            <h3>Color Grading</h3>
+            <p>Consistent, cinematic color that gives every video its own mood.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">My recent work</p>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <!-- Filter buttons: data-filter must match the "category" of projects in script.js -->
+        <div class="filter-buttons reveal" id="filterButtons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="short-film">Short Films</button>
+          <button class="filter-btn" data-filter="music-video">Music Videos</button>
+          <button class="filter-btn" data-filter="social">Social Media</button>
+          <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+        </div>
+
+        <!-- Project cards are created automatically from CONFIG.projects in script.js -->
+        <div class="projects-grid" id="projectsGrid"></div>
+        <p class="no-projects" id="noProjects" hidden>No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ===== JOURNEY / TIMELINE SECTION ===== -->
+    <section class="section section-alt" id="journey">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Education &amp; experience</p>
+          <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+        </div>
+
+        <div class="timeline">
+          <!-- EDIT: your education and experience -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 - Present</span>
+              <h3>BS Information Technology</h3>
+              <p class="timeline-place">Eastwoods Professional College</p>
+              <p>Second-year student focusing on web development, multimedia and systems.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 - Present</span>
+              <h3>Freelance Video Editor</h3>
+              <p class="timeline-place">Self-employed</p>
+              <p>Editing vlogs, event highlights and short-form content for clients and friends.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2023 - 2025</span>
+              <h3>Senior High School</h3>
+              <p class="timeline-place">Limay Senior High School</p>
+              <p>Edited school videos, presentations and event coverage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-tag">Let's talk</p>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <h3>Have a video that needs editing?</h3>
+            <p>Send me a message and I'll get back to you as soon as I can.</p>
+            <!-- EDIT: your contact details -->
+            <div class="contact-item">
+              <span class="contact-icon">&#9993;</span>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:tayag.roelreiben@epcst.edu.ph">tayag.roelreiben@epcst.edu.ph</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#128205;</span>
+              <div>
+                <h4>Location</h4>
+                <p>Philippines</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">&#9200;</span>
+              <div>
+                <h4>Availability</h4>
+                <p>Open for freelance projects</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- The form opens your visitor's email app with the message ready to send.
+               No server or database is needed. -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Juan Dela Cruz">
+              <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="juan@example.com">
+              <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Video editing project">
+              <small class="error-message"></small>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+              <small class="error-message"></small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <a href="#home" class="logo">Roel<span>.</span></a>
+      <p>&copy; <span id="year"></span> Roel Reiben Tayag. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+  <!-- ===== VIDEO POPUP (MODAL) ===== -->
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Close">&times;</button>
+      <div class="modal-video" id="modalVideo"></div>
+      <div class="modal-body">
+        <span class="modal-category" id="modalCategory"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <div class="modal-tools" id="modalTools"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
